@@ -1,0 +1,30 @@
+.filter {
+    .filter__header {
+        text-align: center;
+        margin: 0 16px;
+    }
+    hr {
+        width: 70%;
+    }
+    .filter__main {
+        display: grid;
+        grid-template-columns: 50% auto;
+        button {
+          display: block;
+          width: 72px;
+          margin: 16px auto;
+          height: 32px;
+          background: #ccff99;
+          border: 2px solid #ccff99;
+          border-radius: 4px;
+          box-shadow: none;
+          outline: none;
+          text-transform: capitalize;
+          &.active {
+            background: #88cc00;
+            border: 2px solid #88cc00;
+          }
+        }
+      }
+      
+}

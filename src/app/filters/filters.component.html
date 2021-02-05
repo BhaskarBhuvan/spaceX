@@ -1,0 +1,6 @@
+<div class="filters">
+    <h3 class="filters__header">Filters</h3>
+    <app-filter [firstColumn]="evenYears" [secondColumn]="oddYears" header="Launch Year" queryKey="launch_year"></app-filter>
+    <app-filter [firstColumn]="[true]" [secondColumn]="[false]" header="Successful Launch" queryKey="launch_success"></app-filter>
+    <app-filter [firstColumn]="[true]" [secondColumn]="[false]" header="Successful Landing" queryKey="land_success"></app-filter>
+</div>

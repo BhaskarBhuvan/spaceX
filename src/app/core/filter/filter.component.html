@@ -1,0 +1,18 @@
+<div class="filter">
+    <div class="filter__header">
+        {{header}}
+        <hr />
+    </div>
+    <div class="filter__main">
+        <div>
+            <button *ngFor="let col of firstColumn" [class.active]="queryObj[queryKey] === col+''" (click)="onFilterSelect(col)">
+                {{col}}
+            </button>
+        </div>
+        <div>
+            <button *ngFor="let col of secondColumn" [class.active]="queryObj[queryKey] === col+''" (click)="onFilterSelect(col)">
+                {{col}}
+            </button>
+        </div>
+    </div>
+</div>

@@ -3,8 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { MissionsComponent } from './missions/missions.component';
 
 const routes: Routes = [
-  {path: '', redirectTo:'home', pathMatch:'full'},
-  {path: 'home', component: MissionsComponent},
+  {path: '', redirectTo:'missions', pathMatch:'full'},
+  {path: 'missions', component: MissionsComponent},
 ];
 
 @NgModule({
