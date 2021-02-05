@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "npm run serve:ssr",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -11,7 +11,8 @@
     "dev:ssr": "ng run spaceX:serve-ssr",
     "serve:ssr": "node dist/spaceX/server/main.js",
     "build:ssr": "ng build --prod && ng run spaceX:server:production",
-    "prerender": "ng run spaceX:prerender"
+    "prerender": "ng run spaceX:prerender",
+    "postinstall": "npm run build:ssr"
   },
   "private": true,
   "dependencies": {
