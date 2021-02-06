@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "npm run serve:ssr",
-    "build": "npm run build:ssr",
+    "build": "npm run build:ssr && npm run prerender",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
@@ -12,7 +12,7 @@
     "serve:ssr": "node dist/spaceX/server/main.js",
     "build:ssr": "ng build --aot --prod && ng run spaceX:server:production",
     "prerender": "ng run spaceX:prerender",
-    "postinstall": "npm run build:ssr"
+    "postinstall": "npm run build:ssr && npm run prerender"
   },
   "private": true,
   "dependencies": {
