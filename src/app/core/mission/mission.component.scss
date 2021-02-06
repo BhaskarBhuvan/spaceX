@@ -1,12 +1,7 @@
-.mission__image {
+.mission__image-container {
   text-align: center;
-  width: 100%;
-  img {
-    height: 200px;
-    width: 200px;
-    margin-top: 16px;
-    background: #eeecec;
-  }
+  margin: 16px;
+  background: #eeecec;
 }
 
 .mission__content {
