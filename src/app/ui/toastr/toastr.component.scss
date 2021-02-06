@@ -1,0 +1,22 @@
+.toastr {
+  position: fixed;
+  top: 20%;
+  left: 30%;
+  z-index: 5;
+  height: auto;
+  width: 40%;
+  display: grid;
+  grid-template-columns: 90% auto;
+  background: salmon;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  transition: 2s ease-in;
+  animation: fadein 0.5s, fadeout 0.5s 4.5s;
+}
+
+.toast__close {
+    background: salmon;
+    outline: none;
+    border: none;
+}

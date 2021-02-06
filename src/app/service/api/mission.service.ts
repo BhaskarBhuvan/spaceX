@@ -14,8 +14,8 @@ export class MissionService {
   getMissions(queryObj:{[key:string]: string}):Observable<mission[]> {
     const params = new HttpParams({
       fromObject: {
+        limit: '100',
         ...queryObj,
-        limit: '100'
       }
     });
 

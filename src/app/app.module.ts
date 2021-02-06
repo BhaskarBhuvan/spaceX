@@ -8,6 +8,8 @@ import { FiltersComponent } from './filters/filters.component';
 import { MissionComponent } from './core/mission/mission.component';
 import { FilterComponent } from './core/filter/filter.component';
 import { HttpClientModule } from '@angular/common/http';
+import { SpinnerComponent } from './ui/spinner/spinner.component';
+import { ToastrComponent } from './ui/toastr/toastr.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { HttpClientModule } from '@angular/common/http';
     MissionsComponent,
     FiltersComponent,
     MissionComponent,
-    FilterComponent
+    FilterComponent,
+    SpinnerComponent,
+    ToastrComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

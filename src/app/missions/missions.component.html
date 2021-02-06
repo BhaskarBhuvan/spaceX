@@ -1,4 +1,6 @@
-<ul class="missions">
+<app-spinner *ngIf="isLoading"></app-spinner>
+<app-toastr *ngIf="isError" (closeToast)="onToastClose()"></app-toastr>
+<ul class="missions" *ngIf="!isError">
     <li *ngFor="let mission of missions">
         <app-mission [mission]="mission"></app-mission>
     </li>

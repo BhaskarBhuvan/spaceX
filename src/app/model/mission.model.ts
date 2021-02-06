@@ -5,5 +5,5 @@ export interface mission {
   flightNumber: number;
   launchYear: string;
   launchSuccess: string|boolean;
-  landSuccess: string| boolean;
+  landSuccess: string|boolean;
 }
