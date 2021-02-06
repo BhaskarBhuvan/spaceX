@@ -1,3 +1,5 @@
 <ul class="missions">
-    <app-mission *ngFor="let mission of missions" [mission]="mission"></app-mission>
+    <li *ngFor="let mission of missions">
+        <app-mission [mission]="mission"></app-mission>
+    </li>
 </ul>

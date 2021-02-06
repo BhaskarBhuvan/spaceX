@@ -1,5 +1,36 @@
-.mission {
-  border-radius: 4px;
-  background: white;
-  height: 450px;
+.mission__image {
+  text-align: center;
+  width: 100%;
+  img {
+    height: 200px;
+    width: 200px;
+    margin-top: 16px;
+    background: #eeecec;
+  }
+}
+
+.mission__content {
+  ul {
+    margin: 16px;
+    padding: 0;
+    list-style: none;
+    li {
+      margin: 8px 0;
+      h4 {
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+        &.mission__title {
+          color: #36c;
+        }
+      }
+      .mission__ids {
+        list-style-type: disc;
+        margin: 0 16px;
+        .mission__id {
+          margin: 0 16px;
+        }
+      }
+    }
+  }
 }

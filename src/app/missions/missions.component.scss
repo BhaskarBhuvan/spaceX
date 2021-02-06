@@ -3,8 +3,12 @@
   padding: 0;
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   column-gap: 8px;
   row-gap: 8px;
-  text-align: center;
+  li {
+    border-radius: 4px;
+    background: white;
+    height: 450px;
+  }
 }
