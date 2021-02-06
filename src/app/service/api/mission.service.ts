@@ -25,12 +25,12 @@ export class MissionService {
     }).pipe(map(res => {
       const missions = (res || []).map((mission) => {
         return {
-          missionId: mission.mission_id,
-          missionImg: mission.links?.mission_patch,
-          missionName: mission.mission_name,
-          flightNumber: mission.flight_number,
-          launchYear: mission.launch_year,
-          launchSuccess: mission.launch_success,
+          missionId: mission?.mission_id,
+          missionImg: mission?.links?.mission_patch_small,
+          missionName: mission?.mission_name,
+          flightNumber: mission?.flight_number,
+          launchYear: mission?.launch_year,
+          launchSuccess: mission?.launch_success,
           landSuccess: mission?.rocket?.first_stage?.cores[0]?.land_success
         }
       });

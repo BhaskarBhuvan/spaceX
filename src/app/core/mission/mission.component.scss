@@ -1,12 +1,7 @@
-.mission__image {
+.mission__image-container {
   text-align: center;
-  width: 100%;
-  img {
-    height: 200px;
-    width: 200px;
-    margin-top: 16px;
-    background: #eeecec;
-  }
+  margin: 16px;
+  background: #eeecec;
 }
 
 .mission__content {
@@ -16,20 +11,20 @@
     list-style: none;
     li {
       margin: 8px 0;
-      h4 {
-        display: inline-block;
-        padding: 0;
-        margin: 0;
-        &.mission__title {
-          color: #36c;
-        }
+    }
+    h4 {
+      display: inline-block;
+      padding: 0;
+      margin: 0;
+      &.mission__title {
+        color: #36c;
       }
-      .mission__ids {
-        list-style-type: disc;
+    }
+    .mission__ids {
+      list-style-type: disc;
+      margin: 0 16px;
+      .mission__id {
         margin: 0 16px;
-        .mission__id {
-          margin: 0 16px;
-        }
       }
     }
   }
