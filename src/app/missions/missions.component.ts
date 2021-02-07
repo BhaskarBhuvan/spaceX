@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { finalize, switchMap } from 'rxjs/operators';
+import { switchMap } from 'rxjs/operators';
 import { mission } from '../model/mission.model';
 import { MissionService } from '../service/api/mission.service';
 
@@ -10,6 +10,7 @@ import { MissionService } from '../service/api/mission.service';
   styleUrls: ['./missions.component.scss'],
 })
 export class MissionsComponent implements OnInit {
+  /** flag to get track the state of api call. true -> before response appears */
   isLoading = false;
   isError = false;
   missions: mission[];
@@ -22,7 +23,7 @@ export class MissionsComponent implements OnInit {
     this._route.queryParams
       .pipe(switchMap((queryObj) => {
         this.isLoading = true;
-        return this._mission.getMissions(queryObj)
+        return this._mission.getMissions(queryObj);
       })
       ).subscribe(
         (missions) => {
@@ -31,7 +32,8 @@ export class MissionsComponent implements OnInit {
         },
         (err) => {
           this.isError = true;
-          this.isLoading = false
+          this.isLoading = false;
+          this.missions = [];
         }
       );
   }

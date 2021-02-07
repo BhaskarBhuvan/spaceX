@@ -26,10 +26,18 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('spaceX');
   });
 
-  it('should render title', () => {
+  it('should test header content', () => {
     const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
+    const app = fixture.componentInstance;
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('spaceX app is running!');
+    expect(compiled.querySelector('header>h2').textContent).toContain('SpaceX Launch Programs');
   });
+
+  it('should test footer content', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    const compiled = fixture.nativeElement;
+    expect(compiled.querySelector('footer>h3').textContent).toContain('Developed by: Bhaskar Bhuvan');
+  });
+
 });

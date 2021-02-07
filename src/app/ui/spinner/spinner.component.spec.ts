@@ -22,4 +22,10 @@ describe('SpinnerComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should test loader content', () => {
+    const compiled = fixture.nativeElement;
+    expect(compiled.querySelector('.loader').textContent).toContain('Loading...');
+  });
+
 });

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { mission } from 'src/app/model/mission.model';
 
 @Component({
@@ -6,9 +6,12 @@ import { mission } from 'src/app/model/mission.model';
   templateUrl: './mission.component.html',
   styleUrls: ['./mission.component.scss'],
 })
-export class MissionComponent implements OnInit {
+export class MissionComponent {
+  /** it holds mission details */
   @Input() mission: mission;
-  constructor() {}
 
-  ngOnInit(): void {}
+  /**
+   * constructor MissionComponent class
+   */
+  constructor() {}
 }

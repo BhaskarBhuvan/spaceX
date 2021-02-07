@@ -19,7 +19,15 @@ describe('ToastrComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should test component instance and it\'s property', () => {
     expect(component).toBeTruthy();
+    expect(component.closeToast).toBeDefined();
+  });
+
+  it(`should test close method.`, () => {
+    expect(component.close).toBeDefined();
+    spyOn(component, 'close').and.callThrough();
+    component.close();
+    expect(component.close).toHaveBeenCalled();
   });
 });
