@@ -38,8 +38,8 @@ describe('MissionsComponent', () => {
 
   const _route = {
     queryParams: {
-      pipe: (operator) => {
-        operator(source);
+      pipe: (operator1, operator2) => {
+        operator1(source);
         return subscription;
       }
     }

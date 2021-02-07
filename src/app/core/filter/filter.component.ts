@@ -1,12 +1,13 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-filter',
   templateUrl: './filter.component.html',
   styleUrls: ['./filter.component.scss'],
 })
-export class FilterComponent implements OnInit {
+export class FilterComponent implements OnInit, OnDestroy {
   /** query param name for url. e.g- launch_year */
   @Input() queryKey: string;
   /** header of filter */
@@ -17,6 +18,9 @@ export class FilterComponent implements OnInit {
   @Input() secondColumn: string[] | boolean[];
   /** property which holds the queryParams value */
   queryObj: Params;
+  /** it will subscription reference */
+  private subscription: Subscription;
+
   /**
    * constructor of FilterComponent
    * @param router router instance of angular router. Used for updating the query params.
@@ -29,7 +33,7 @@ export class FilterComponent implements OnInit {
    * It is used for queryParams subscription.
    */
   ngOnInit(): void {
-    this.route.queryParams.subscribe((query: Params) => {
+    this.subscription = this.route.queryParams.subscribe((query: Params) => {
       this.queryObj = query;
     });
   }
@@ -49,5 +53,13 @@ export class FilterComponent implements OnInit {
       queryParams: queryParams,
       queryParamsHandling: 'merge',
     });
+  }
+
+  /**
+   * destroy lifecycle of angular component.
+   * It is used to unsubscribe the subscriptions
+   */
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe();
   }
 }
